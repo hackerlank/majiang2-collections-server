@@ -44,7 +44,7 @@ public abstract class AbstractVerifyManager<T> {
         accumlate(t);
     }
 
-    protected abstract int getVerifyId(T t);
+    public abstract int getVerifyId(T t);
 
     protected abstract int getAccumlate(T t);
 
