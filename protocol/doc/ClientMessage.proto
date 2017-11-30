@@ -1,0 +1,63 @@
+package com.randioo.mahjong_public_server.protocol;
+import "Login.proto";
+import "Role.proto";
+import "Match.proto";
+import "Fight.proto";
+import "Settings.proto";
+import "Race.proto";
+import "Heart.proto";
+import "Gm.proto";
+import "Playback.proto";
+
+message CS{
+	optional HeartRequest HeartRequest = 1;
+	optional CSHeart CSHeart = 2;
+	
+	optional LoginCheckAccountRequest LoginCheckAccountRequest = 3;
+	optional LoginCreateRoleRequest LoginCreateRoleRequest = 4;
+	optional LoginGetRoleDataRequest LoginGetRoleDataRequest = 5;
+
+	optional RoleRenameRequest RoleRenameRequest = 6;
+	optional RoleGetRoleDataRequest RoleGetRoleDataRequest = 7;
+	optional RoleGetServerTimeRequest RoleGetServerTimeRequest = 8;
+
+	optional MatchCreateGameRequest MatchCreateGameRequest = 9;
+	optional MatchPreJoinRequest MatchPreJoinRequest = 10;//预加入房间
+	optional MatchJoinGameRequest MatchJoinGameRequest = 11;
+	optional MatchCheckRoomRequest MatchCheckRoomRequest = 12;
+
+	optional FightReadyRequest FightReadyRequest = 13;
+	optional FightExitGameRequest FightExitGameRequest = 14;
+	optional FightApplyExitGameRequest FightApplyExitGameRequest = 15;//申请退出
+	optional FightAgreeExitGameRequest FightAgreeExitGameRequest = 16;
+	optional FightSendCardRequest FightSendCardRequest = 17;
+	optional FightSendTingCardRequest FightSendTingCardRequest = 18;
+	optional FightRecommandRequest FightRecommandRequest = 19;
+	optional FightGetlastRoundRequest FightGetlastRoundRequest = 20;
+	optional FightPengRequest FightPengRequest = 21;
+	optional FightGangRequest FightGangRequest = 22;
+	optional FightHuRequest FightHuRequest = 23;
+	optional FightGuoRequest FightGuoRequest = 24;
+	optional FightChiRequest FightChiRequest = 25;//吃的请求
+	optional FightQueryGameConfigRequest FightQueryGameConfigRequest = 26;//查询游戏配置
+	optional FightClientDispatchRequest FightClientDispatchRequest = 27;//客户端调试配牌
+	optional FightClientTouchCardRequest FightClientTouchCardRequest = 28;//客户端调试摸牌
+	optional FightConfirmGameOverRequest FightConfirmGameOverRequest = 29;//确认游戏结束
+	optional FightPreTingRequest FightPreTingRequest = 30;//点下听时 
+
+	optional SettingsRequest SettingsRequest = 31;
+	optional SettingsShowRequest SettingsShowRequest = 32;
+
+	optional RaceJoinRaceRequest RaceJoinRaceRequest = 33;
+	optional RaceShowQueueRequest RaceShowQueueRequest = 34;
+
+	optional FightTingCheckResultRequest FightTingCheckResultRequest = 35;
+
+	optional GmEnvVarsRequest GmEnvVarsRequest = 36;
+	optional GmGameInfoRequest GmGameInfoRequest = 37;
+	optional GmDispatchCardRequest GmDispatchCardRequest = 38;
+	optional GmRoundRequest GmRoundRequest = 39;
+
+	optional PlaybackCatelogRequest PlaybackCatelogRequest = 40;
+	optional PlaybackGetBinaryRequest PlaybackGetBinaryRequest = 41;
+} // 41

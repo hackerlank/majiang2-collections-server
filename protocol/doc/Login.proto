@@ -1,0 +1,37 @@
+package com.randioo.mahjong_public_server.protocol;
+import "Entity.proto";
+
+message LoginCheckAccountRequest{
+	optional string account = 1;
+}
+
+message LoginCheckAccountResponse{
+	optional int32 errorCode=1 [default = 1];
+}
+
+message LoginCreateRoleRequest{
+	optional string account=1;
+	optional string name=2;
+}
+
+message LoginCreateRoleResponse{
+	optional int32 errorCode=1 [default = 1];
+}
+
+message LoginGetRoleDataRequest{
+	optional string account=1;
+	optional string uuid = 2;
+	optional string headImageUrl = 3;
+	optional string nickname = 4;
+	optional string lantiLongi = 5;//经纬度坐标
+	optional string voiceId = 6;//声音id
+}
+
+message LoginGetRoleDataResponse{
+	optional int32 errorCode=1 [default = 1];
+	optional RoleData roleData = 2;
+}
+
+message SCLoginOtherSide{
+	
+}
