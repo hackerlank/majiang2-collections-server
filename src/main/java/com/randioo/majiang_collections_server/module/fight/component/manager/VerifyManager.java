@@ -12,7 +12,7 @@ import com.randioo.randioo_server_base.service.AbstractVerifyManager;
 public class VerifyManager extends AbstractVerifyManager<Verify> {
 
     @Override
-    protected int getVerifyId(Verify t) {
+    public int getVerifyId(Verify t) {
         return t.verifyId;
     }
 
